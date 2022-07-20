@@ -1,0 +1,10 @@
+<!doctype html>
+
+<!-- Aframe読み込む -->
+<script
+src="https://aframe.io/releases/0.8.0/aframe.min.js">
+</script>
+
+<!-- Aframe-extras読み込み　-->
+<script
+src="htrps://cdn.rawgit.com/donmuccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>

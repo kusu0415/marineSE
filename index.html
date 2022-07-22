@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,23 +10,25 @@
     <!-- AR.js を読み込む -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <title>任意のページタイトル</title>
-  </head>
-  <body style="margin: 0; overflow: hidden">
+</head>
+
+<body style="margin: 0; overflow: hidden">
     <a-scene embedded arjs vr-mode-ui="enabled: false;">
-	    
-      <!-- 3DCGモデルを読み込む -->
-      <a-assets>
-        <a-asset-item id="tiger" src="./asset/marinerennsyuu.glb"></a-asset-item>
-      </a-assets>
 
-      <!-- マーカーの.pattファイルを読み込む -->
-      <a-marker type="pattern" url="./asset/pattern-tiger.patt">
-        <!-- 3Dモデルを呼び出す -->
-        <a-entity gltf-model="#tiger"></a-entity>
-      </a-marker>
+        <!-- 3DCGモデルを読み込む -->
+        <a-assets>
+            <a-asset-item id="marine" src="./asset/2Q marine don't move.glb.glb"></a-asset-item>
+        </a-assets>
 
-      <!-- カメラを追加 -->
-      <a-entity camera></a-entity>
+        <!-- マーカーの.pattファイルを読み込む -->
+        <a-marker type="pattern" url="./asset/marine.patt">
+            <!-- 3Dモデルを呼び出す -->
+            <a-entity gltf-model="#marine"></a-entity>
+        </a-marker>
+
+        <!-- カメラを追加 -->
+        <a-entity camera></a-entity>
     </a-scene>
-  </body>
+</body>
+
 </html>

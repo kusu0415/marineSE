@@ -1,32 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js">
+</script>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- A-Frame を読み込む -->
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <!-- AR.js を読み込む -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <title>任意のページタイトル</title>
-</head>
-
-<body style="margin: 0; overflow: hidden">
-    <a-scene embedded arjs vr-mode-ui="enabled: false;">
-
-        <!-- 3DCGモデルを読み込む -->
-        <a-assets>
-            <a-asset-item id="marine" src="https://github.com/kusu0415/marineSE/blob/main/2Q%20marine%20don't%20move.glb?raw=true"></a-asset-item>
-        </a-assets>
-
-        <!-- マーカーの.pattファイルを読み込む -->
-        <a-marker type="pattern" url="https://github.com/kusu0415/marineSE/blob/main/pattern-frame%20(1).png?raw=true">
-            <!-- 3Dモデルを呼び出す -->
-            <a-entity gltf-model="#2Q%20marine%20don't%20move"></a-entity>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+                <a-obj-model src="marine.obj" mtl="marine.mtl"> 
+                </a-obj-model>
         </a-marker>
-
-        <!-- カメラを追加 -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
